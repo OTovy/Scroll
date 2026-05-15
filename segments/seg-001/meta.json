@@ -1,0 +1,14 @@
+{
+  "header": "Quiet type, clear hierarchy",
+  "timestamp": "2026-05-01T10:00:00+03:00",
+  "topics": ["Design", "Typography"],
+  "files": {
+    "text": "text.txt",
+    "image": "image.svg",
+    "video": "video.mp4"
+  },
+  "render": {
+    "prefer": "image"
+  }
+}
+

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Endless Segments</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#feed">Skip to content</a>
+
+    <div class="app">
+      <aside id="nav" class="nav" aria-label="Segments navigation">
+        <div class="brand">
+          <div class="brand__title">Endless</div>
+          <div class="brand__subtitle">segments + topics</div>
+        </div>
+
+        <div class="nav__section">
+          <label class="field">
+            <span class="field__label">Filter</span>
+            <input id="q" class="input" type="search" placeholder="Topic or text…" autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="nav__section">
+          <div class="nav__header">
+            <div class="nav__title">Topics</div>
+            <button id="clearTopic" class="chip chip--ghost" type="button">All</button>
+          </div>
+          <div id="topics" class="topics" role="list"></div>
+        </div>
+
+        <div class="nav__section nav__section--segments">
+          <div class="nav__header">
+            <div class="nav__title">Segments</div>
+            <button id="toTop" class="chip chip--ghost" type="button">Top</button>
+          </div>
+          <ol id="segments" class="segments"></ol>
+        </div>
+
+        <div class="nav__footer">
+          <div class="muted" id="status">Loading…</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <button id="toggleNavFab" class="fab" type="button" aria-expanded="false" aria-controls="nav">
+          Menu
+        </button>
+
+        <section id="feed" class="feed" aria-label="Feed"></section>
+
+        <div class="sentinel-wrap" aria-hidden="true">
+          <div id="sentinel" class="sentinel"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

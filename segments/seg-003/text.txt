@@ -1,0 +1,8 @@
+Walking notes are perfect “segments”:
+
+- short
+- self-contained
+- easy to navigate later
+
+Put each segment’s assets in its own folder so editing stays simple.
+

@@ -1,0 +1,5 @@
+Keep boundaries small enough to understand, large enough to matter.
+
+This segment demonstrates “one folder per segment”:
+text, image, and video live together — so editing stays simple.
+

@@ -1,0 +1,14 @@
+{
+  "header": "Notes from a short walk",
+  "timestamp": "2026-04-22T18:15:00+03:00",
+  "topics": ["Travel", "Notes"],
+  "files": {
+    "text": "text.txt",
+    "image": "image.svg",
+    "video": "video.mp4"
+  },
+  "render": {
+    "prefer": "image"
+  }
+}
+
