@@ -1,11 +1,10 @@
 {
-  "header": "Quiet type, clear hierarchy",
+  "header": "I am You",
   "timestamp": "2026-05-01T10:00:00+03:00",
-  "topics": ["Design", "Typography"],
+  "topics": ["Philosophy"],
   "files": {
     "text": "text.txt",
-    "image": "image.svg",
-    "video": "video.mp4"
+    "image": "image.svg"
   },
   "render": {
     "prefer": "image"
