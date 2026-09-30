@@ -4,7 +4,7 @@
   "topics": ["Philosophy"],
   "files": {
     "text": "text.txt",
-    "image": "image.svg"
+    "image": "image.jpg"
   },
   "render": {
     "prefer": "image"
