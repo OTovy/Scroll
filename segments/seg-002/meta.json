@@ -1,11 +1,9 @@
 {
-  "header": "Small boundaries scale well",
+  "header": "Sink in the ocean of reality",
   "timestamp": "2026-04-28T09:30:00+03:00",
-  "topics": ["Engineering", "Architecture"],
+  "topics": ["Philosophy", "Reality", "Language"],
   "files": {
     "text": "text.txt",
-    "image": "image.svg",
-    "video": "video.mp4"
   },
   "render": {
     "prefer": "image"
