@@ -1,11 +1,10 @@
 {
-  "header": "Notes from a short walk",
+  "header": "Harmonic Metaphysics",
   "timestamp": "2026-04-22T18:15:00+03:00",
-  "topics": ["Travel", "Notes"],
+  "topics": ["Metaphysics", "Harmony", "Philosophy"],
   "files": {
     "text": "text.txt",
-    "image": "image.svg",
-    "video": "video.mp4"
+    "image": "image.jpeg"
   },
   "render": {
     "prefer": "image"
