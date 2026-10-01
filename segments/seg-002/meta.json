@@ -4,6 +4,7 @@
   "topics": ["Philosophy", "Reality", "Language"],
   "files": {
     "text": "text.txt",
+    "image": "image.png"
   },
   "render": {
     "prefer": "image"
