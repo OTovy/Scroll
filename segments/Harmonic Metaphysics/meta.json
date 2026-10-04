@@ -1,6 +1,4 @@
 {
-  "header": "Harmonic Metaphysics",
-  "timestamp": "2026-04-22T18:15:00+03:00",
   "topics": ["Metaphysics", "Harmony", "Philosophy"],
   "files": {
     "text": "text.txt",
@@ -10,4 +8,3 @@
     "prefer": "image"
   }
 }
-
