@@ -1,6 +1,4 @@
 {
-  "header": "I am You",
-  "timestamp": "2026-05-01T10:00:00+03:00",
   "topics": ["Philosophy"],
   "files": {
     "text": "text.txt",
@@ -10,4 +8,3 @@
     "prefer": "image"
   }
 }
-

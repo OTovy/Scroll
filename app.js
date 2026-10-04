@@ -27,7 +27,7 @@ let metaBySlug = new Map(); // slug -> meta json
 let feedComplete = false;
 
 function segmentBasePath(slug) {
-  return `./segments/${slug}`;
+  return `./segments/${encodeURIComponent(slug)}`;
 }
 
 function metaUrl(slug) {
@@ -64,15 +64,6 @@ function normalizeTopics(meta) {
   if (Array.isArray(meta?.topics) && meta.topics.length) return meta.topics.map(String);
   if (typeof meta?.topic === "string" && meta.topic.trim()) return [meta.topic.trim()];
   return ["Unknown"];
-}
-
-function formatTimestamp(ts) {
-  const d = new Date(ts);
-  if (Number.isNaN(d.getTime())) return String(ts || "");
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
 }
 
 async function urlExistsNonEmpty(url) {
@@ -168,10 +159,7 @@ function createCard(data) {
 
   const footer = document.createElement("div");
   footer.className = "card__footer";
-  const ts = document.createElement("div");
-  ts.className = "muted";
-  ts.textContent = data.date || "";
-  footer.append(ts, actions);
+  footer.append(actions);
   card.append(footer);
 
   return { card, textEl: text };
@@ -295,8 +283,6 @@ function appendBatch(count = 10) {
     const meta = metaBySlug.get(slug);
     const topics = normalizeTopics(meta);
     const topic = topics[0] || "Unknown";
-    const header = meta?.header || slug;
-    const date = meta?.timestamp ? formatTimestamp(meta.timestamp) : "";
 
     const image = meta?.files?.image ? fileUrl(slug, meta.files.image) : null;
 
@@ -304,8 +290,7 @@ function appendBatch(count = 10) {
       id,
       topic,
       topics,
-      date,
-      title: header,
+      title: slug,
       text: "",
       media: {
         type: "image",
@@ -510,12 +495,7 @@ setStatus("Loading segments…");
   try {
     const slugs = await loadSegmentsIndex();
     const metas = await Promise.all(slugs.map((s) => loadMeta(s)));
-    const items = slugs.map((slug, i) => {
-      const meta = metas[i];
-      const t = new Date(meta?.timestamp || 0).getTime();
-      return { slug, meta, t: Number.isNaN(t) ? 0 : t };
-    });
-    items.sort((a, b) => b.t - a.t);
+    const items = slugs.map((slug, i) => ({ slug, meta: metas[i] }));
 
     segmentSlugs = items.map((x) => x.slug);
     metaBySlug = new Map(items.map((x) => [x.slug, x.meta]));
