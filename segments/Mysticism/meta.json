@@ -1,0 +1,10 @@
+{
+  "topics": ["Philosophy", "Reality", "Language"],
+  "files": {
+    "text": "text.txt",
+    "image": "image.jpg"
+  },
+  "render": {
+    "prefer": "image"
+  }
+}
