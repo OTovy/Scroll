@@ -1,0 +1,10 @@
+{
+  "topics": ["Philosophy", "Skill", "Martial Arts"],
+  "files": {
+    "text": "text.txt",
+    "image": "image.jpg"
+  },
+  "render": {
+    "prefer": "image"
+  }
+}
