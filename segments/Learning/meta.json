@@ -1,0 +1,10 @@
+{
+  "topics": ["Philosophy", "Learning"],
+  "files": {
+    "text": "text.txt",
+    "image": "image.jpg"
+  },
+  "render": {
+    "prefer": "image"
+  }
+}

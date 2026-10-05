@@ -1,4 +1,0 @@
-{
-  "deprecated": true,
-  "note": "Replaced by per-segment `meta.json` + `segments/segments.json`."
-}
